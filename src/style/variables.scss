@@ -1,0 +1,61 @@
+/* цвета */
+$white: #F3F3F3;
+$grey: #2E4555;
+
+$blue: #2D64A1;
+$green: #5EBFC5;
+$orange: #E6641B;
+$yellow: #FADF55;
+
+/* текст */
+
+/*главная страница*/
+%main-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 48px;
+}
+
+%main-descr {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+/* общие */
+
+%title-articles {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+%descr-price {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+%title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+}
+
+%descr {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+}

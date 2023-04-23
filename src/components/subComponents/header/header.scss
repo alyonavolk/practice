@@ -1,0 +1,38 @@
+@import '../../../style/index.scss';
+
+.header {
+    // position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 25px 150px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.1);
+    &__logo{
+        img {
+            width: 100%;
+            max-width: 390px;
+            min-width: 200px;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 9vw;
+        @extend %title;
+        font-weight: 400;
+        &_link{
+            a{
+                padding: 0 10px;
+            }
+            img {
+                max-width: 55px;
+                width: 100%;
+                min-width: 20px;
+            }
+        }
+    }
+}
