@@ -4,7 +4,9 @@
     // position: fixed;
     width: 100%;
     display: flex;
-    padding: 25px 150px;
+    @extend %pd;
+    padding-top: 15px;
+    padding-bottom: 15px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -12,7 +14,7 @@
     &__logo{
         img {
             width: 100%;
-            max-width: 390px;
+            max-width: 300px;
             min-width: 200px;
         }
     }
@@ -29,7 +31,7 @@
                 padding: 0 10px;
             }
             img {
-                max-width: 55px;
+                max-width: 45px;
                 width: 100%;
                 min-width: 20px;
             }

@@ -20,7 +20,7 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
         </div>
         <ul className='footer__items'>
             <li className='footer__item'>
-                <NavLink className={`footer__link`} to={ROUTES.routes}>
+                <NavLink className={`footer__link`} to={ROUTES.tours}>
                     Маршруты
                 </NavLink>
             </li>
@@ -64,15 +64,15 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
             </li>
             <li className='footer__item'>
                 <NavLink className='footer__link_soc'
-                    to='https://vk.com'>
+                    to='https://vk.com/krugosvetka_ural'>
                     <img src={vk} alt='vk' />
                 </NavLink>
                 <NavLink className='footer__link_soc' 
-                    to='https://ok.ru'>
+                    to='https://ok.ru/profile/16606458438?utm_campaign=mobile_share&utm_content=profile'>
                     <img src={ok} alt='ok' />
                 </NavLink>
                 <NavLink className='footer__link_soc' 
-                    to='https://web.telegram.org/'>
+                    to='https://t.me/krugosvetka_74'>
                     <img src={tg} alt='ok' />
                 </NavLink>
             </li>

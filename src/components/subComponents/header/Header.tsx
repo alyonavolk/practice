@@ -22,10 +22,10 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
       <div className='header__info'>
         <p>площадь Революции, г. Челябинск</p>
         <div className='header__info_link'>
-          <NavLink to='https://vk.com'>
+          <NavLink to='https://vk.com/krugosvetka_ural'>
             <img src={vk} alt='vk' />
           </NavLink>
-          <NavLink to='https://ok.ru'>
+          <NavLink to='https://ok.ru/profile/16606458438?utm_campaign=mobile_share&utm_content=profile'>
             <img src={ok} alt='ok' />
           </NavLink>
         </div>

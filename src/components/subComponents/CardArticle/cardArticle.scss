@@ -1,0 +1,31 @@
+@import '../../../style/index.scss';
+
+.card_article{
+    border-radius: 65px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    img{
+        transition: filter 0.3s linear;
+        border-radius: 65px;
+        width: 30%;
+        object-fit: cover;
+        width: 490px;
+        height: 490px;
+        filter: brightness(70%);
+    }
+    p{
+        position: absolute;
+        color: $white;
+        @extend %title-articles;
+        font-weight: 700;
+        bottom: 0;
+        padding: 40px;
+    }
+    &:hover{
+        img{
+            filter: brightness(50%);
+            cursor: pointer;
+        }
+    }
+}

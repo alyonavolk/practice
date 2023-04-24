@@ -1,0 +1,32 @@
+@import '../../../style/index.scss';
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 0;
+
+    &__item{
+        transition: color 0.3s linear;
+        @extend %title;
+        padding: 10px;
+    }
+    &__white{
+        position: absolute;
+        width: 100%;
+        .menu__item{
+            color: $white;
+            a.active, &:hover {
+                color: $grey;
+            }
+        }
+    }
+    &__black {
+        .menu__item{
+            color: $grey;
+            a.active, &:hover {
+                color: $green;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '../../../style/index.scss';
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    img{
+        border-radius: 65px;
+        width: 20%;
+    }
+}

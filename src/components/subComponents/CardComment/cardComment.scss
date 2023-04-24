@@ -1,0 +1,23 @@
+@import '../../../style/index.scss';
+
+.card_comment{
+    box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.1);
+    border-radius: 65px;
+    max-width: 500px;
+    img{
+        width: 197px;
+        height: 197px;
+        border-radius: 50%;
+        display: block;
+        margin: 20px auto;
+    }
+    .name_autor{
+        @extend %title-articles;
+        text-align: center;
+    }
+    .comment{
+        max-width: 380px;
+        margin: 40px;
+        @extend %descr;
+    }
+}
