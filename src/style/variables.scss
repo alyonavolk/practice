@@ -19,8 +19,16 @@ $yellow: #FADF55;
         padding-right: 100px;
     }
     @media (max-width: 1024px){
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    @media (max-width: 564px){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media (max-width: 380px){
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 

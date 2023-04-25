@@ -37,4 +37,15 @@
             }
         }
     }
+
+    @media (max-width: 1024px){
+        &__logo{
+            img {
+                max-width: 250px;
+            }
+        }
+        &__info {
+            gap: 30px;
+        }
+    }
 }

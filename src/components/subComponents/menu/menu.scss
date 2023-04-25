@@ -22,6 +22,7 @@
         }
     }
     &__black {
+        justify-content: space-between;
         .menu__item{
             color: $grey;
             a.active, &:hover {

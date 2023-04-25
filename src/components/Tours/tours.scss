@@ -8,6 +8,7 @@
     }
     &__search {
         display: flex;
+        flex-wrap: wrap;
         gap: 2%;
         margin: 20px 0;
         &_input{
@@ -16,7 +17,7 @@
             background-color: $white;
             border-radius: 65px;
         
-            width: 100%;
+            width: 85%;
             padding: 10px 20px;
             border: none;
             transition: box-shadow 0.3s linear;

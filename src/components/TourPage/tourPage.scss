@@ -1,0 +1,71 @@
+@import '../../style/variables.scss';
+
+.tourPage {
+    @extend %pd;
+    &__title{
+        @extend %title-articles;
+        padding: 40px 0 15px;
+        &_descr{
+            @extend %descr;
+        }
+    }
+    &__img{
+        width: 100%;
+        padding: 30px 0;
+        img {
+            width: 100%;
+            border-radius: 65px;
+            max-height: 800px;
+            object-fit: cover;
+        }
+    }
+    &__content{
+        padding: 40px 0 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__map{
+        max-width: 40%;
+    }
+    &__info{
+        max-width: 60%;
+        &_descr{
+            @extend %descr;
+            max-width: 70%;
+        }
+        &_img{
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            img {
+                max-width: 15vw;
+                min-width: 200px;
+                height: 30vh;
+                max-height: 350px;
+                border-radius: 40px;
+                object-fit: cover;
+            }
+        }
+    }
+    &__price{
+        display: flex;
+        justify-content: space-between;
+
+        &_title {
+            @extend %title;
+            padding-bottom: 5px;
+        }
+        ul {
+            width: 75%;
+            li {
+                @extend %descr;
+                padding: 5px 0;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

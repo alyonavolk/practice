@@ -2,23 +2,47 @@
 
 .form_search{
     @extend %title;
+    @extend %pd;
+    margin-top: 100px;
+    margin-bottom: 120px;
     form{
         background-color: rgba(94, 191, 197, 0.4);
         box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.1);
         border-radius: 60px;
+        padding: 25px 40px 45px 40px;
+        .top_line{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            &:first-child{
+                margin-bottom: 15px;
+            }
+            p{
+                padding-left: 25px;
+                padding-bottom: 5px;
+            }
+            .blok_button{
+                padding-top: 22px;
+            }
+            #type{
+                width: 470px;
+            }
+            #city, #date{
+                width: 460px;
+            }
+            #days{
+                width: 300px;
+            }
+        }
         input, select{
             @extend %descr;
             border-radius: 65px;
             border: none;
-            padding: 10px 50px 10px 10px; //?
+            padding: 10px 10px 10px 15px; //?
         }
-        p{
-            padding-left: 20px;
+        input{
+            padding: 12px 10px 12px 15px;
         }
-        select{
-            option:hover{
-                color: $blue;
-            }
-        }
+        
     }
 }

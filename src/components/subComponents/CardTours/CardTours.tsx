@@ -4,6 +4,7 @@ import './cardTours.scss';
 import timeImg from '../../../resources/img/time.svg';
 import geo from '../../../resources/img/geo.svg';
 import Button from '../button/Button';
+import { NavLink } from 'react-router-dom';
 
 interface ICardToursProps {
     img: string;
@@ -13,16 +14,20 @@ interface ICardToursProps {
     place: string;
     price: number;
     like: boolean;
+    link: string;
 }
 
 const CardTours: React.FunctionComponent<ICardToursProps> = ({
     img, title, description,
-    time, place, price, like
+    time, place, price, like,
+    link
 }) => {
   return (
     <div className='cardTours'>
         <div className='cardTours__img'>
-            <img src={`../img/${img}`} alt="img" />
+            <NavLink to={link}>
+                <img src={`../img/${img}`} alt="img" />
+            </NavLink>
             <div className={`cardTours__like ${ like ? 'cardTours__like_active' : ''}`}>
                 <div className='heart'></div>
             </div>

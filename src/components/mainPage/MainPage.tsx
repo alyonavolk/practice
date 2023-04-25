@@ -12,6 +12,7 @@ import CardComment from '../subComponents/CardComment/CardComment';
 import Autor1 from '../../resources/img/екатерина.png';
 import Autor2 from '../../resources/img/елена.png';
 import Autor3 from '../../resources/img/римма.png';
+import { ROUTES } from '../ROUTES';
 
 interface IMainPageProps {
 }
@@ -30,14 +31,14 @@ const MainPage: React.FunctionComponent<IMainPageProps> = (props) => {
         <div className='main__form'><FormSearch /></div>
         <div className='main__articles'>
             <div>
-                <CardArticle image={Article1} nameArticle='Где отдохнуть в зимние выходные?' link="lf"/>
-                <CardArticle image={Article2} nameArticle='Фестиваль Уральские валенки в г. Куса' link="lf"/>
-                <CardArticle image={Article3} nameArticle='Музей пельменя г. Миасс' link="lf"/>
+                <CardArticle image={Article1} nameArticle='Где отдохнуть в зимние выходные?' link={ROUTES.article1}/>
+                <CardArticle image={Article2} nameArticle='Фестиваль Уральские валенки в г. Куса' link={ROUTES.article2}/>
+                <CardArticle image={Article3} nameArticle='Музей пельменя г. Миасс' link={ROUTES.article3}/>
             </div>
         </div>
         <div className='main__gallery'>
             <h1>Галерея</h1>
-            <Gallery/>
+            <Gallery/> 
         </div>
         <div className='main__comments'>
             <h1>Отзывы</h1>

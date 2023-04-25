@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState, useEffect } from 'react';
 import './tours.scss';
 import CardTours from '../subComponents/CardTours/CardTours';
 import Menu from '../subComponents/menu/Menu';
@@ -6,6 +6,7 @@ import Menu from '../subComponents/menu/Menu';
 import Cards from '../../resources/Cards.json';
 import Button from '../subComponents/button/Button';
 import Pagination from '../subComponents/pagination/Pagination';
+import { ROUTES } from '../ROUTES';
 
 interface IToursProps {
 }
@@ -15,12 +16,13 @@ const Tours: React.FunctionComponent<IToursProps> = (props) => {
 
     const [card, setCard] = useState(Cards);
     const [filt, setFilt] = useState(card);
+    const [pagin, setPagin] = useState(filt);
 
     const [currentPage, setCurrentPage] = useState(1);
     const OrdersPerPage = 10;
     const lastOrdersIndex = currentPage * OrdersPerPage;
     const firstOrdersIndex = lastOrdersIndex - OrdersPerPage;
-    const currentOrders = filt.slice(firstOrdersIndex, lastOrdersIndex);
+    const currentOrders = pagin.slice(firstOrdersIndex, lastOrdersIndex);
 
     const paginate = (page: number) => {
         setCurrentPage(page);
@@ -28,9 +30,15 @@ const Tours: React.FunctionComponent<IToursProps> = (props) => {
 
     const filtSearch = () => {
         setCard(Cards);
-        setFilt(card.filter(item => item.title.toLowerCase().includes(value)));
+        setFilt(card.filter(item => item.title.toLowerCase().includes(value.toLowerCase().trim())));
+        setCurrentPage(1);
+        console.log('filt', filt);
+        console.log('pagin', pagin);
     }
 
+    useEffect(() => {
+        setPagin(filt);
+    }, [filt]);
 
 
   return (
@@ -48,7 +56,7 @@ const Tours: React.FunctionComponent<IToursProps> = (props) => {
         </div>
         <div className='tours__cards'>
             {currentOrders.map((val) => 
-                <CardTours key={val.id} img={val.img} title={val.title} 
+                <CardTours key={val.id} link={ROUTES.tour} img={val.img} title={val.title} 
                     description={val.description} time={val.time}
                     place={val.place} price={val.price} like={val.like}
                 />
