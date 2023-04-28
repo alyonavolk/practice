@@ -9,7 +9,8 @@
     &__search {
         display: flex;
         flex-wrap: wrap;
-        gap: 2%;
+        justify-content: space-around;
+        gap: 20px 2%;
         margin: 20px 0;
         &_input{
             @extend %descr;
@@ -17,7 +18,7 @@
             background-color: $white;
             border-radius: 65px;
         
-            width: 85%;
+            width: 80%;
             padding: 10px 20px;
             border: none;
             transition: box-shadow 0.3s linear;
@@ -31,6 +32,54 @@
             }
         }
     }
+    &__sort {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px 0;
+        margin: 30px 0 40px;
+    }
+    &__date {
+        max-width: 320px;
+        width: 100%;
+        min-width: 250px;
+        @extend %descr;
+        box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.1);
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        transition: box-shadow 0.3s linear;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.2);
+        }
+        &:focus{
+            box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.2);
+            outline: none;
+        }
+    }
+    &__select {
+        max-width: 320px;
+        width: 100%;
+        min-width: 250px;
+        @extend %title;
+        box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.1);
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        transition: box-shadow 0.3s linear;
+        cursor: pointer;
+        option.active {
+            @extend %title;
+        }
+        &:hover{
+            box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.2);
+        }
+        &:focus{
+            box-shadow: 0px 10px 20px rgba(46, 69, 85, 0.2);
+            outline: none;
+        }
+    }
     &__cards{
         display: flex;
         flex-wrap: wrap;
@@ -41,5 +90,13 @@
         display: flex;
         justify-content: center;
         margin: 50px 0 70px;
+    }
+    @media (max-width: 576px){
+        &__search {
+            &_input{
+                border-radius: 40px;
+                width: 100%;
+            }
+        }
     }
 }

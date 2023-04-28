@@ -15,22 +15,25 @@ interface ICardToursProps {
     price: number;
     like: boolean;
     link: string;
+    onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
+
+/* для работы с карточками стоит прописвать путь от practice */
 
 const CardTours: React.FunctionComponent<ICardToursProps> = ({
     img, title, description,
     time, place, price, like,
-    link
+    link, onClick
 }) => {
   return (
     <div className='cardTours'>
         <div className='cardTours__img'>
             <NavLink to={link}>
-                <img src={`../img/${img}`} alt="img" />
+                <img src={`practice/img/${img}`} alt="img" />
             </NavLink>
-            <div className={`cardTours__like ${ like ? 'cardTours__like_active' : ''}`}>
+            <button className={`cardTours__like ${ like ? 'cardTours__like_active' : ''}`} onClick={onClick}>
                 <div className='heart'></div>
-            </div>
+            </button>
         </div>
         <div className='cardTours__content'>
             <div className='cardTours__title'>
