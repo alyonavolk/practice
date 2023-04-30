@@ -50,7 +50,7 @@ const MainPage: React.FunctionComponent<IMainPageProps> = (props) => {
         </div>
         <div className='main__connection'>
             <h1>Свяжитесь с нами, если у вас остались вопросы</h1>
-            <div><input type="text" name="" id="" placeholder="Номер телефона"/><Button children="Обратный звонок"/></div>
+            <div><input type="text" name="" id="" placeholder="Номер телефона" className='phone'/><Button children="Обратный звонок"/></div>
             <div className='radio'>
                 <input type="radio" name="" id="trust" className='custom-radio'/>
                 <label htmlFor="trust">я согласен на обработку персональных данных</label> 

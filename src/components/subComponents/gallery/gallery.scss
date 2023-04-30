@@ -6,6 +6,7 @@
     gap: 20px;
     position: relative;
     transition: position 0.3s linear;
+    //flex-wrap: wrap;
     .foto_mini{
         display: flex;
         gap: 20px;
@@ -28,7 +29,6 @@
     }
 
     .big_foto{
-        //animation: big_foto 0.6s ease-in;
         position: absolute;
         top: 0;
         left: 0;
@@ -37,11 +37,14 @@
     }
 }
 
-@keyframes big_foto{  
-    from {     
-        opacity: 0.5;
-    }   
-    to {
-        opacity: 1;
+@media (max-width: 1200px){
+    .gallery{
+        flex-wrap: wrap;
+        .foto1{
+            display: none;
+        }
+        .right-foto{
+            width: 100%;
+        }
     }
 }

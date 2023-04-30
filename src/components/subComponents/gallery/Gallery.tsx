@@ -19,7 +19,7 @@ const Gallery: React.FunctionComponent<IGalleryProps> = (props) => {
         <img src={Foto1} alt="" 
           className={`foto1 ${ image1 ? 'big_foto' : 'foto1' }`} 
           onClick={() => setImage1(!image1)}/>
-        <div>
+        <div className='right-foto'>
           <div className="foto_mini">
             <img src={Foto2} alt="" className={`foto2 ${ image2 ? 'big_foto' : 'foto2' }`} 
           onClick={() => setImage2(!image2)}/>

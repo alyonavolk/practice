@@ -24,14 +24,23 @@
             .blok_button{
                 padding-top: 22px;
             }
-            #type{
-                width: 470px;
-            }
-            #city, #date{
+            .form_from,.form_date{
                 width: 460px;
             }
-            #days{
+            .form_days{
                 width: 300px;
+            }
+            .form_type{
+                width: 470px;
+            }
+            #type{
+                width: 100%;
+            }
+            #city, #date{
+                width: 100%;
+            }
+            #days{
+                width: 100%;
             }
         }
         input, select{

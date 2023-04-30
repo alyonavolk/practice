@@ -9,8 +9,8 @@ const FormSearch: React.FunctionComponent<IFormSearchProps> = (props) => {
     <div className='form_search'>
         <form action="">
             <div className="top_line">
-                <div><p>Откуда</p>
-                    <select name="" id="city">
+                <div className='form_from'><p>Откуда</p>
+                    <select name="" id="city" className='city'>
                         <option value="" className="name_option">Челябинск</option>
                         <option value="">Екатеринбург</option>
                         <option value="">Миасс</option>
@@ -23,7 +23,7 @@ const FormSearch: React.FunctionComponent<IFormSearchProps> = (props) => {
                         <option value="">Таганай</option>
                     </select>
                 </div>
-                <div><p>Куда</p>
+                <div className='form_from'><p>Куда</p>
                     <select name="" id="city">
                         <option value="">Челябинск</option>
                         <option value="">Екатеринбург</option>
@@ -37,10 +37,10 @@ const FormSearch: React.FunctionComponent<IFormSearchProps> = (props) => {
                         <option value="">Таганай</option>
                     </select>
                 </div>
-                <div> <p>Дата</p>     <input type="date" id='date'/></div>
+                <div className='form_date'> <p>Дата</p>     <input type="date" id='date'/></div>
             </div>
             <div className="top_line">
-                <div><p>Длительность</p>
+                <div className='form_days'><p>Длительность</p>
                     <select name="" id="days">
                         <option value="">1 день</option>
                         <option value="">2 дня</option>
@@ -54,7 +54,7 @@ const FormSearch: React.FunctionComponent<IFormSearchProps> = (props) => {
                     </select>
                 </div>
                 <div><p>Кол-во человек</p>   <input type="number"  min="1" id='count'/></div>
-                <div><p>Вид</p>
+                <div className='form_type'><p>Вид</p>
                     <select name="" id="type">
                         <option value="">тематическая программа</option>
                         <option value="">сюжетная программа</option>
