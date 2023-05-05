@@ -31,8 +31,8 @@ const MainPage: React.FunctionComponent<IMainPageProps> = (props) => {
         <div className='main__form'><FormSearch /></div>
         <div className='main__articles'>
             <div>
-                <CardArticle image={Article1} nameArticle='Где отдохнуть в зимние выходные?' link={ROUTES.article1}/>
-                <CardArticle image={Article2} nameArticle='Фестиваль Уральские валенки в г. Куса' link={ROUTES.article2}/>
+                <CardArticle image={Article1} nameArticle='Где отдохнуть в зимние выходные?' link={ROUTES.article2}/>
+                <CardArticle image={Article2} nameArticle='Фестиваль Уральские валенки в г. Куса' link={ROUTES.article1}/>
                 <CardArticle image={Article3} nameArticle='Музей пельменя г. Миасс' link={ROUTES.article3}/>
             </div>
         </div>

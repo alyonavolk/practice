@@ -1,0 +1,54 @@
+@import '../../style/index.scss';
+
+.contacts{
+    @extend %pd;
+    margin-bottom: 150px;
+    h1{
+        @extend %title-articles;
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+    &__info{
+        display: flex;
+        .map{
+            border-radius: 60px;
+            width: 100%;
+        }
+        .more_info{
+            margin-left: 100px;
+            div{
+                display: flex;
+                &:nth-child(1){
+                    margin-bottom: 30px;
+                }
+            }
+            .adress, .mail{
+                width: 24px;
+                margin-right: 20px
+            }
+            p{
+                @extend %descr-about;
+            }
+
+            .seti{
+                margin-top: 60px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+    }
+}
+
+@media (max-width:928px){
+    .contacts__info{
+        display: block;
+        .map{
+            width: 100%;
+        }
+        .more_info{
+            margin: 0;
+            margin-top: 20px;
+        }
+    }
+}
