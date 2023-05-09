@@ -8,9 +8,6 @@ import Button from '../subComponents/button/Button';
 import Pagination from '../subComponents/pagination/Pagination';
 import { ROUTES } from '../ROUTES';
 
-interface IToursProps {
-}
-
 const view = [
     {id: 1, content: 'Вид', title: 'active'},
     {id: 2, content: 'тематическая программа', title: ''},
@@ -22,7 +19,7 @@ const view = [
     {id: 8, content: 'активный', title: ''}
 ]
 
-const Tours: React.FunctionComponent<IToursProps> = (props) => {
+const Tours: React.FC = (props) => {
     const [value, setValue] = useState('');
 
     const [card, setCard] = useState(Cards);

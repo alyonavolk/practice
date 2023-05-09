@@ -1,25 +1,31 @@
 import './tourPage.scss';
 import Menu from '../subComponents/menu/Menu';
+import Button from '../subComponents/button/Button';
 
 import tour1 from '../../resources/img/tour1.jpg';
 import tour2 from '../../resources/img/tour2.jpg';
-import Button from '../subComponents/button/Button';
+import time from '../../resources/img/pageTour.svg';
 
-interface ITourPageProps {
-}
-
-const TourPage: React.FunctionComponent<ITourPageProps> = (props) => {
+const TourPage: React.FC = (props) => {
   return (
     <div className='tourPage'>
         <Menu color='black' />
         <h2 className='tourPage__title'>Название тура</h2>
         <p className='tourPage__title_descr'>тип тура</p>
         <div className='tourPage__img'>
-            <img src={tour1} alt="photo" />
+            <img src={tour1} alt="tour" />
         </div>
         <div className='tourPage__content'>
             <div className='tourPage__map'>
-                sdad
+                <img src={time} alt='time' />
+                <ul>
+                    <li>8:00 <br/>Выезд из Челябинска</li>
+                    <li>11:00 <br/>Знакомство с городом Сысерть</li>
+                    <li>12:30 <br/>Экскурсия и мастер-класс на фабрике «Сысертский фарфор»</li>
+                    <li>14:00 <br/>Прогулка в парке Бажовские места </li>
+                    <li>17:00 <br/>Выезд в Челябинск</li>
+                    <li>20:00 <br/>Прибытие в Челябинск</li>
+                </ul>
             </div>
             <div className='tourPage__info'>
                 <p className='tourPage__info_descr'>

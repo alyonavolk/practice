@@ -25,10 +25,7 @@ import img32 from "../../resources/img/article3-2.jpg";
 import img33 from "../../resources/img/article3-3.jpg";
 
 
-interface IRoutesPageProps {
-}
-
-const RoutesPage: React.FunctionComponent<IRoutesPageProps> = () => {
+const RoutesPage: React.FC = () => {
   return (
     <Routes>
         <Route path={ROUTES.main} 
